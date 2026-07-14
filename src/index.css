@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --color-coffee-50: #faf6f0;
+  --color-coffee-100: #f0e8d8;
+  --color-coffee-200: #e0d0b8;
+  --color-coffee-300: #c8b090;
+  --color-coffee-400: #a88860;
+  --color-coffee-500: #8a6840;
+  --color-coffee-600: #6a4830;
+  --color-coffee-700: #5B3A29;
+  --color-coffee-800: #4a2e20;
+  --color-coffee-900: #3a2218;
+
+  --color-cream-50: #fefcf9;
+  --color-cream-100: #F5F1EA;
+  --color-cream-200: #ebe3d6;
+  --color-cream-300: #d9cdb8;
+  --color-cream-400: #c0b094;
+  --color-cream-500: #a89474;
+
+  --color-olive-50: #f5f6f0;
+  --color-olive-100: #e8ebe0;
+  --color-olive-200: #d0d6c0;
+  --color-olive-300: #b0ba98;
+  --color-olive-400: #909e70;
+  --color-olive-500: #68724D;
+  --color-olive-600: #505a3a;
+  --color-olive-700: #384228;
+  --color-olive-800: #202a18;
+  --color-olive-900: #101208;
+
+  --color-gold-50: #fefce8;
+  --color-gold-100: #fef9c3;
+  --color-gold-200: #fef08a;
+  --color-gold-300: #fde047;
+  --color-gold-400: #facc15;
+  --color-gold-500: #eab308;
+  --color-gold-600: #ca8a04;
+  --color-gold-700: #a16207;
+  --color-gold-800: #854d06;
+  --color-gold-900: #713f12;
+
+  --color-dark-50: #f5f4f3;
+  --color-dark-100: #e0dfdc;
+  --color-dark-200: #c0beb8;
+  --color-dark-300: #a09d94;
+  --color-dark-400: #807c70;
+  --color-dark-500: #605b4c;
+  --color-dark-600: #484438;
+  --color-dark-700: #2D2A26;
+  --color-dark-800: #1e1c18;
+  --color-dark-900: #0f0e0c;
+
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-cream-100);
+  color: var(--color-dark-700);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
