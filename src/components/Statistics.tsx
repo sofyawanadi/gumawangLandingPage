@@ -59,7 +59,7 @@ export default function Statistics() {
   const { t } = useTranslation()
   const { ref, inView } = useInView()
   return (
-    <section className="bg-coffee-700 py-20 md:py-28">
+    <section className="bg-coffee-700 py-20 md:py-28" aria-label={t('stats.sectionLabel')}>
       <div className="mx-auto max-w-6xl px-6">
         <div ref={ref} className="grid grid-cols-2 gap-8 md:grid-cols-4">
           {stats.map((stat, i) => (

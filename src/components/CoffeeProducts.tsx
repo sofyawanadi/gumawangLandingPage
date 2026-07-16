@@ -83,7 +83,7 @@ function ProductCard({
 }) {
   const { ref, inView } = useInView()
   return (
-    <div
+    <article
       ref={ref}
       className={inView ? 'animate-slide-up' : 'opacity-0'}
       style={{ animationDelay: `${index * 0.1}s` }}
@@ -135,6 +135,6 @@ function ProductCard({
           </a>
         </CardContent>
       </Card>
-    </div>
+    </article>
   )
 }

@@ -25,6 +25,7 @@
     "altImage": "Coffee plantation in Indonesia"
   },
   "stats": {
+    "sectionLabel": "Company Statistics",
     "roasted": "Coffee Roasted",
     "origins": "Coffee Origins",
     "partners": "Business Partners",

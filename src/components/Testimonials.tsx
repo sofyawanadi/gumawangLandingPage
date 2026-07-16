@@ -41,7 +41,7 @@ export default function Testimonials() {
 
         <div ref={gridRef} className="grid gap-8 md:grid-cols-3">
           {testimonialKeys.map((key, i) => (
-            <div
+            <article
               key={key}
               className={`rounded-lg border border-cream-200 bg-cream-50 p-8 ${gridInView ? 'animate-slide-up' : 'opacity-0'}`}
               style={{ animationDelay: `${i * 0.1}s` }}
@@ -59,7 +59,7 @@ export default function Testimonials() {
                 </p>
                 <p className="text-sm text-dark-500">{t(`${key}.location`)}</p>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
