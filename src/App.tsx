@@ -1,16 +1,18 @@
+import { lazy, Suspense } from 'react'
 import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
 import ScrollProgress from '@/components/ScrollProgress'
 import BackToTop from '@/components/BackToTop'
 import Hero from '@/components/Hero'
 import AboutUs from '@/components/AboutUs'
-import Statistics from '@/components/Statistics'
-import CoffeeProducts from '@/components/CoffeeProducts'
-import RoastingProcess from '@/components/RoastingProcess'
-import WhyChooseUs from '@/components/WhyChooseUs'
-import Gallery from '@/components/Gallery'
-import Testimonials from '@/components/Testimonials'
-import CTA from '@/components/CTA'
+
+const Statistics = lazy(() => import('@/components/Statistics'))
+const CoffeeProducts = lazy(() => import('@/components/CoffeeProducts'))
+const RoastingProcess = lazy(() => import('@/components/RoastingProcess'))
+const WhyChooseUs = lazy(() => import('@/components/WhyChooseUs'))
+const Gallery = lazy(() => import('@/components/Gallery'))
+const Testimonials = lazy(() => import('@/components/Testimonials'))
+const CTA = lazy(() => import('@/components/CTA'))
+const Footer = lazy(() => import('@/components/Footer'))
 
 export default function App() {
   return (
@@ -20,15 +22,19 @@ export default function App() {
       <main className="flex-1">
         <Hero />
         <AboutUs />
-        <Statistics />
-        <CoffeeProducts />
-        <RoastingProcess />
-        <WhyChooseUs />
-        <Gallery />
-        <Testimonials />
-        <CTA />
+        <Suspense fallback={null}>
+          <Statistics />
+          <CoffeeProducts />
+          <RoastingProcess />
+          <WhyChooseUs />
+          <Gallery />
+          <Testimonials />
+          <CTA />
+        </Suspense>
       </main>
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
       <BackToTop />
     </div>
   )

@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion'
 import { Quote, Star } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
+import { useInView } from '@/hooks/useInView'
 
 const testimonialKeys = [
   'testimonials.items.t1',
@@ -21,15 +21,15 @@ function Stars() {
 
 export default function Testimonials() {
   const { t } = useTranslation()
+  const { ref: headerRef, inView: headerInView } = useInView()
+  const { ref: gridRef, inView: gridInView } = useInView()
+
   return (
     <section className="bg-white py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.6 }}
-          className="mb-16 text-center"
+        <div
+          ref={headerRef}
+          className={`mb-16 text-center ${headerInView ? 'animate-slide-up' : 'opacity-0'}`}
         >
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-gold-700">
             {t('testimonials.label')}
@@ -37,17 +37,14 @@ export default function Testimonials() {
           <h2 className="font-heading text-4xl font-bold leading-tight tracking-tight text-coffee-700 md:text-6xl">
             {t('testimonials.title')}
           </h2>
-        </motion.div>
+        </div>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <div ref={gridRef} className="grid gap-8 md:grid-cols-3">
           {testimonialKeys.map((key, i) => (
-            <motion.div
+            <div
               key={key}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="rounded-lg border border-cream-200 bg-cream-50 p-8"
+              className={`rounded-lg border border-cream-200 bg-cream-50 p-8 ${gridInView ? 'animate-slide-up' : 'opacity-0'}`}
+              style={{ animationDelay: `${i * 0.1}s` }}
             >
               <div className="flex items-center justify-between">
                 <Quote className="text-gold-600/40" size={32} strokeWidth={1.5} />
@@ -62,7 +59,7 @@ export default function Testimonials() {
                 </p>
                 <p className="text-sm text-dark-500">{t(`${key}.location`)}</p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

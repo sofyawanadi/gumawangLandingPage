@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
-import { motion } from 'framer-motion'
 import { Package, MapPin, Users, Calendar } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
+import { useInView } from '@/hooks/useInView'
 
 const stats = [
   { icon: Package, labelKey: 'stats.roasted', target: 5000, display: '5,000', suffix: ' Kg' },
@@ -57,18 +57,16 @@ function Counter({ target, display, suffix }: { target: number; display: string;
 
 export default function Statistics() {
   const { t } = useTranslation()
+  const { ref, inView } = useInView()
   return (
     <section className="bg-coffee-700 py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+        <div ref={ref} className="grid grid-cols-2 gap-8 md:grid-cols-4">
           {stats.map((stat, i) => (
-            <motion.div
+            <div
               key={stat.labelKey}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="text-center"
+              className={`text-center ${inView ? 'animate-slide-up' : 'opacity-0'}`}
+              style={{ animationDelay: `${i * 0.1}s` }}
             >
               <div className="mx-auto mb-4 flex size-14 items-center justify-center rounded-full border border-gold-600/40 bg-gold-600/10 text-gold-500">
                 <stat.icon size={24} strokeWidth={1.5} />
@@ -79,7 +77,7 @@ export default function Statistics() {
               <p className="mt-2 text-xs uppercase tracking-wider text-cream-400 md:text-sm">
                 {t(stat.labelKey)}
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
