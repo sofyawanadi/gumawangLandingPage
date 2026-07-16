@@ -1,30 +1,16 @@
 import { motion } from 'framer-motion'
 import { Coffee, Leaf, ShieldCheck, Package } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 const reasons = [
-  {
-    icon: Coffee,
-    title: 'Freshly Roasted',
-    desc: 'Every batch is roasted to order, ensuring peak freshness and flavor in every bean.',
-  },
-  {
-    icon: Leaf,
-    title: 'Premium Beans',
-    desc: "We source only the highest grade beans directly from Indonesia's top growing regions.",
-  },
-  {
-    icon: ShieldCheck,
-    title: 'Quality Control',
-    desc: 'Rigorous quality checks at every stage — from sourcing to packaging.',
-  },
-  {
-    icon: Package,
-    title: 'Wholesale Ready',
-    desc: 'Flexible wholesale options for cafes, restaurants, and retail partners.',
-  },
+  { icon: Coffee, titleKey: 'why.reasons.r1.title', descKey: 'why.reasons.r1.desc' },
+  { icon: Leaf, titleKey: 'why.reasons.r2.title', descKey: 'why.reasons.r2.desc' },
+  { icon: ShieldCheck, titleKey: 'why.reasons.r3.title', descKey: 'why.reasons.r3.desc' },
+  { icon: Package, titleKey: 'why.reasons.r4.title', descKey: 'why.reasons.r4.desc' },
 ]
 
 export default function WhyChooseUs() {
+  const { t } = useTranslation()
   return (
     <section className="bg-white py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
@@ -36,17 +22,17 @@ export default function WhyChooseUs() {
           className="mb-16 text-center"
         >
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-gold-700">
-            Why Choose Us
+            {t('why.label')}
           </p>
           <h2 className="font-heading text-4xl font-bold leading-tight tracking-tight text-coffee-700 md:text-6xl">
-            Committed to Quality
+            {t('why.title')}
           </h2>
         </motion.div>
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {reasons.map((reason, i) => (
             <motion.div
-              key={reason.title}
+              key={reason.titleKey}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
@@ -57,10 +43,10 @@ export default function WhyChooseUs() {
                 <reason.icon size={24} strokeWidth={1.5} />
               </div>
               <h3 className="mt-6 font-heading text-xl font-semibold text-coffee-700">
-                {reason.title}
+                {t(reason.titleKey)}
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-dark-600">
-                {reason.desc}
+                {t(reason.descKey)}
               </p>
             </motion.div>
           ))}

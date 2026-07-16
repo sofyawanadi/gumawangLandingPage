@@ -1,13 +1,15 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 
 const steps = [
-  { number: '01', title: 'Bean Selection', desc: 'Hand-selecting the finest beans from trusted Indonesian farmers.' },
-  { number: '02', title: 'Quality Inspection', desc: 'Rigorous screening for size, color, and defect-free beans.' },
-  { number: '03', title: 'Small Batch Roasting', desc: 'Artisan roasting in small batches to preserve unique flavor profiles.' },
-  { number: '04', title: 'Fresh Packaging', desc: 'Immediately sealed with one-way valves to maintain peak freshness.' },
+  { number: '01', titleKey: 'process.steps.s1.title', descKey: 'process.steps.s1.desc' },
+  { number: '02', titleKey: 'process.steps.s2.title', descKey: 'process.steps.s2.desc' },
+  { number: '03', titleKey: 'process.steps.s3.title', descKey: 'process.steps.s3.desc' },
+  { number: '04', titleKey: 'process.steps.s4.title', descKey: 'process.steps.s4.desc' },
 ]
 
 export default function RoastingProcess() {
+  const { t } = useTranslation()
   return (
     <section className="bg-coffee-800 py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
@@ -19,13 +21,13 @@ export default function RoastingProcess() {
           className="mb-16 text-center"
         >
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-gold-500">
-            The Process
+            {t('process.label')}
           </p>
           <h2 className="font-heading text-4xl font-bold leading-tight tracking-tight text-white md:text-6xl">
-            From Farm to Bag
+            {t('process.title')}
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-base text-cream-400 md:text-lg">
-            Every step is crafted with care and precision.
+            {t('process.description')}
           </p>
         </motion.div>
 
@@ -46,10 +48,10 @@ export default function RoastingProcess() {
               </div>
               <div className="mx-auto mb-4 h-px w-12 bg-gold-600" />
               <h3 className="font-heading text-xl font-semibold text-white">
-                {step.title}
+                {t(step.titleKey)}
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-cream-400">
-                {step.desc}
+                {t(step.descKey)}
               </p>
             </motion.div>
           ))}

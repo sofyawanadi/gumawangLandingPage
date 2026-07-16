@@ -1,0 +1,123 @@
+{
+  "navbar": {
+    "home": "Home",
+    "coffee": "Coffee",
+    "about": "About",
+    "brand": "Gumawang Coffee"
+  },
+  "hero": {
+    "subtitle": "Indonesian Coffee Roastery",
+    "title1": "Crafting Exceptional",
+    "title2": "Indonesian Coffee",
+    "description": "Small batch roasting with carefully selected beans from Indonesia's finest coffee-growing regions.",
+    "explore": "Explore Coffee",
+    "contact": "Contact Us"
+  },
+  "about": {
+    "label": "About Us",
+    "title1": "Every Bean Has",
+    "title2": "a Story",
+    "p1": "At Gumawang Coffee, we believe every coffee bean has a story.",
+    "p2": "We source premium beans directly from Indonesian farmers and roast them carefully in small batches to preserve each origin's unique character.",
+    "p3": "Whether you're a cafe owner, reseller, or coffee enthusiast, we're committed to delivering exceptional quality in every cup.",
+    "years": "5+",
+    "yearsLabel": "Years of Roasting",
+    "altImage": "Coffee plantation in Indonesia"
+  },
+  "stats": {
+    "roasted": "Coffee Roasted",
+    "origins": "Coffee Origins",
+    "partners": "Business Partners",
+    "experience": "Years Experience"
+  },
+  "products": {
+    "label": "Our Coffee",
+    "title1": "Single-Origin",
+    "title2": "Indonesian Beans",
+    "description": "Discover our carefully curated selection, each with its own unique character and story.",
+    "inquire": "Inquire",
+    "items": {
+      "gayo": {
+        "name": "Arabica Gayo",
+        "origin": "Aceh",
+        "roast": "Medium Roast",
+        "notes": ["Chocolate", "Caramel", "Citrus"],
+        "description": "Smooth and well-balanced with a hint of citrus brightness. Grown in the highlands of Aceh at 1,200-1,600m elevation."
+      },
+      "preanger": {
+        "name": "Java Preanger",
+        "origin": "West Java",
+        "roast": "Medium Light",
+        "notes": ["Brown Sugar", "Floral", "Honey"],
+        "description": "Delicate and aromatic with a sweet, honey-like finish. Grown in the volcanic soils of West Java's Priangan highlands."
+      },
+      "toraja": {
+        "name": "Toraja",
+        "origin": "Sulawesi",
+        "roast": "Dark Roast",
+        "notes": ["Dark Chocolate", "Spices", "Earthy"],
+        "description": "Full-bodied and bold with a complex spicy character. Grown in the highlands of Sulawesi at 1,500-1,800m elevation."
+      }
+    }
+  },
+  "process": {
+    "label": "The Process",
+    "title": "From Farm to Bag",
+    "description": "Every step is crafted with care and precision.",
+    "steps": {
+      "s1": { "title": "Bean Selection", "desc": "Hand-selecting the finest beans from trusted Indonesian farmers." },
+      "s2": { "title": "Quality Inspection", "desc": "Rigorous screening for size, color, and defect-free beans." },
+      "s3": { "title": "Small Batch Roasting", "desc": "Artisan roasting in small batches to preserve unique flavor profiles." },
+      "s4": { "title": "Fresh Packaging", "desc": "Immediately sealed with one-way valves to maintain peak freshness." }
+    }
+  },
+  "why": {
+    "label": "Why Choose Us",
+    "title": "Committed to Quality",
+    "reasons": {
+      "r1": { "title": "Freshly Roasted", "desc": "Every batch is roasted to order, ensuring peak freshness and flavor in every bean." },
+      "r2": { "title": "Premium Beans", "desc": "We source only the highest grade beans directly from Indonesia's top growing regions." },
+      "r3": { "title": "Quality Control", "desc": "Rigorous quality checks at every stage — from sourcing to packaging." },
+      "r4": { "title": "Wholesale Ready", "desc": "Flexible wholesale options for cafes, restaurants, and retail partners." }
+    }
+  },
+  "gallery": {
+    "label": "Gallery",
+    "title": "Our World of Coffee",
+    "images": {
+      "img1": "Coffee beans close-up",
+      "img2": "Coffee roasting process",
+      "img3": "Coffee packaging",
+      "img4": "Coffee brewing",
+      "img5": "Cup of coffee",
+      "img6": "Coffee warehouse"
+    }
+  },
+  "testimonials": {
+    "label": "Testimonials",
+    "title": "What Partners Say",
+    "items": {
+      "t1": { "quote": "The consistency and flavor are exceptional.", "author": "Coffee Shop Owner", "location": "Jakarta" },
+      "t2": { "quote": "Our customers immediately noticed the difference. Best coffee we've ever served.", "author": "Cafe Manager", "location": "Bandung" },
+      "t3": { "quote": "Gumawang's single-origin beans are a game changer for our menu.", "author": "Restaurant Owner", "location": "Bali" }
+    }
+  },
+  "cta": {
+    "title1": "Ready to Serve",
+    "title2": "Better Coffee?",
+    "description": "Partner with us and bring the taste of Indonesia's finest coffee to your business.",
+    "contact": "Contact Us"
+  },
+  "footer": {
+    "brand": "Gumawang Coffee",
+    "tagline": "Roasted with Care, Brewed with Character. Small batch roasting with carefully selected beans from Indonesia's finest coffee-growing regions.",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "whatsapp": "WhatsApp",
+    "copyright": "Gumawang Coffee. All rights reserved."
+  },
+  "common": {
+    "backToTop": "Back to top",
+    "toggleMenu": "Toggle menu"
+  }
+}

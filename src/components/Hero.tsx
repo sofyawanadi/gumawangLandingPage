@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 export default function Hero() {
+  const { t } = useTranslation()
   return (
     <section id="home" className="relative flex min-h-screen items-center justify-center overflow-hidden bg-coffee-700">
       <div
@@ -27,7 +29,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="mb-8 text-sm font-medium uppercase tracking-[0.3em] text-gold-500"
         >
-          Indonesian Coffee Roastery
+          {t('hero.subtitle')}
         </motion.p>
 
         <motion.h1
@@ -36,9 +38,9 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="font-heading text-5xl font-bold leading-[1.05] tracking-tight text-white md:text-7xl lg:text-8xl"
         >
-          Crafting Exceptional
+          {t('hero.title1')}
           <br />
-          <span className="text-gold-500">Indonesian Coffee</span>
+          <span className="text-gold-500">{t('hero.title2')}</span>
         </motion.h1>
 
         <motion.p
@@ -47,8 +49,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-cream-300 md:text-xl"
         >
-          Small batch roasting with carefully selected beans from Indonesia's
-          finest coffee-growing regions.
+          {t('hero.description')}
         </motion.p>
 
         <motion.div
@@ -61,14 +62,14 @@ export default function Hero() {
             href="#coffee"
             className="inline-flex h-13 cursor-pointer items-center justify-center gap-2 rounded-md bg-gold-700 px-8 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-gold-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2 focus-visible:ring-offset-coffee-700"
           >
-            Explore Coffee
+            {t('hero.explore')}
             <ArrowRight size={16} />
           </a>
           <a
             href="#contact"
             className="inline-flex h-13 cursor-pointer items-center justify-center rounded-md border border-cream-400/50 px-8 py-3 text-sm font-medium text-cream-100 transition-colors duration-200 hover:border-cream-300 hover:bg-cream-100/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cream-300 focus-visible:ring-offset-2 focus-visible:ring-offset-coffee-700"
           >
-            Contact Us
+            {t('hero.contact')}
           </a>
         </motion.div>
       </div>

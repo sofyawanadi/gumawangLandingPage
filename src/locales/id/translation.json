@@ -1,0 +1,123 @@
+{
+  "navbar": {
+    "home": "Beranda",
+    "coffee": "Kopi",
+    "about": "Tentang",
+    "brand": "Gumawang Coffee"
+  },
+  "hero": {
+    "subtitle": "Sangrai Kopi Indonesia",
+    "title1": "Menciptakan",
+    "title2": "Kopi Indonesia Terbaik",
+    "description": "Sangrai dalam jumlah kecil dengan biji kopi pilihan dari daerah penghasil kopi terbaik di Indonesia.",
+    "explore": "Jelajahi Kopi",
+    "contact": "Hubungi Kami"
+  },
+  "about": {
+    "label": "Tentang Kami",
+    "title1": "Setiap Biji Memiliki",
+    "title2": "Sebuah Cerita",
+    "p1": "Di Gumawang Coffee, kami percaya setiap biji kopi memiliki cerita.",
+    "p2": "Kami mendapatkan biji kopi premium langsung dari petani Indonesia dan menyangrainya dengan teliti dalam jumlah kecil untuk menjaga karakter unik setiap daerah asal.",
+    "p3": "Baik Anda pemilik kafe, reseller, atau pecinta kopi, kami berkomitmen menghadirkan kualitas luar biasa di setiap cangkir.",
+    "years": "5+",
+    "yearsLabel": "Tahun Menyangrai",
+    "altImage": "Perkebunan kopi di Indonesia"
+  },
+  "stats": {
+    "roasted": "Kopi Disangrai",
+    "origins": "Daerah Asal",
+    "partners": "Mitra Bisnis",
+    "experience": "Tahun Pengalaman"
+  },
+  "products": {
+    "label": "Kopi Kami",
+    "title1": "Biji Single-Origin",
+    "title2": "dari Indonesia",
+    "description": "Temukan pilihan kurasi terbaik kami, masing-masing dengan karakter dan cerita uniknya sendiri.",
+    "inquire": "Tanya Seharga",
+    "items": {
+      "gayo": {
+        "name": "Arabica Gayo",
+        "origin": "Aceh",
+        "roast": "Sangrai Medium",
+        "notes": ["Cokelat", "Karamel", "Citrus"],
+        "description": "Lembut dan seimbang dengan sentuhan kecerahan citrus. Tumbuh di dataran tinggi Aceh pada ketinggian 1.200-1.600 meter."
+      },
+      "preanger": {
+        "name": "Java Preanger",
+        "origin": "Jawa Barat",
+        "roast": "Medium Light",
+        "notes": ["Gula Merah", "Floral", "Madu"],
+        "description": "Halus dan aromatik dengan aftertaste manis seperti madu. Tumbuh di tanah vulkanik dataran tinggi Priangan, Jawa Barat."
+      },
+      "toraja": {
+        "name": "Toraja",
+        "origin": "Sulawesi",
+        "roast": "Sangrai Dark",
+        "notes": ["Dark Cokelat", "Rempah", "Earthy"],
+        "description": "Penuh bodi dan kuat dengan karakter rempah yang kompleks. Tumbuh di dataran tinggi Sulawesi pada ketinggian 1.500-1.800 meter."
+      }
+    }
+  },
+  "process": {
+    "label": "Proses Kami",
+    "title": "Dari Kebun ke Kemasan",
+    "description": "Setiap tahap dikerjakan dengan penuh perhatian dan presisi.",
+    "steps": {
+      "s1": { "title": "Seleksi Biji", "desc": "Memilih biji terbaik secara manual dari petani Indonesia tepercaya." },
+      "s2": { "title": "Inspeksi Kualitas", "desc": "Pemeriksaan ketat untuk ukuran, warna, dan biji bebas cacat." },
+      "s3": { "title": "Sangrai Skala Kecil", "desc": "Sangrai artisan dalam jumlah kecil untuk menjaga profil rasa unik." },
+      "s4": { "title": "Kemasan Segar", "desc": "Disegel langsung dengan valve satu arah untuk menjaga kesegaran maksimal." }
+    }
+  },
+  "why": {
+    "label": "Mengapa Memilih Kami",
+    "title": "Berkomitmen pada Kualitas",
+    "reasons": {
+      "r1": { "title": "Disangrai Segar", "desc": "Setiap batch disangrai sesuai pesanan, memastikan kesegaran dan rasa maksimal di setiap biji." },
+      "r2": { "title": "Biji Premium", "desc": "Kami hanya menggunakan biji kelas tertinggi langsung dari daerah penghasil kopi terbaik di Indonesia." },
+      "r3": { "title": "Kontrol Kualitas", "desc": "Pemeriksaan kualitas ketat di setiap tahap — dari sumber hingga kemasan." },
+      "r4": { "title": "Siap Grosir", "desc": "Opsi grosir fleksibel untuk kafe, restoran, dan mitra ritel." }
+    }
+  },
+  "gallery": {
+    "label": "Galeri",
+    "title": "Dunia Kopi Kami",
+    "images": {
+      "img1": "Biji kopi jarak dekat",
+      "img2": "Proses sangrai kopi",
+      "img3": "Kemasan kopi",
+      "img4": "Penyeduhan kopi",
+      "img5": "Cangkir kopi",
+      "img6": "Gudang kopi"
+    }
+  },
+  "testimonials": {
+    "label": "Testimoni",
+    "title": "Apa Kata Mitra Kami",
+    "items": {
+      "t1": { "quote": "Konsistensi dan rasanya luar biasa.", "author": "Pemilik Coffee Shop", "location": "Jakarta" },
+      "t2": { "quote": "Pelanggan kami langsung merasakan bedanya. Kopi terbaik yang pernah kami sajikan.", "author": "Manajer Kafe", "location": "Bandung" },
+      "t3": { "quote": "Biji single-origin Gumawang adalah perubahan besar untuk menu kami.", "author": "Pemilik Restoran", "location": "Bali" }
+    }
+  },
+  "cta": {
+    "title1": "Siap Menyajikan",
+    "title2": "Kopi yang Lebih Baik?",
+    "description": "Jadilah mitra kami dan hadirkan cita rasa kopi terbaik Indonesia untuk bisnis Anda.",
+    "contact": "Hubungi Kami"
+  },
+  "footer": {
+    "brand": "Gumawang Coffee",
+    "tagline": "Disangrai dengan Hati, Disajikan dengan Karakter. Sangrai dalam jumlah kecil dengan biji pilihan dari daerah penghasil kopi terbaik di Indonesia.",
+    "navigation": "Navigasi",
+    "contact": "Kontak",
+    "whatsapp": "WhatsApp",
+    "copyright": "Gumawang Coffee. Hak cipta dilindungi."
+  },
+  "common": {
+    "backToTop": "Kembali ke atas",
+    "toggleMenu": "Buka menu"
+  }
+}

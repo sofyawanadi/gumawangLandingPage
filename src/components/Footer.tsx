@@ -1,4 +1,5 @@
 import { Mail, Phone, MessageCircle } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 function InstagramIcon({ size = 16 }: { size?: number }) {
   return (
@@ -21,38 +22,39 @@ function InstagramIcon({ size = 16 }: { size?: number }) {
   )
 }
 
+const navLinks = [
+  { labelKey: 'navbar.home', href: '#home' },
+  { labelKey: 'navbar.coffee', href: '#coffee' },
+  { labelKey: 'navbar.about', href: '#about' },
+]
+
 export default function Footer() {
+  const { t } = useTranslation()
   return (
     <footer id="contact" className="bg-dark-700 text-cream-100">
       <div className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid gap-12 md:grid-cols-3">
           <div>
             <h3 className="font-heading text-2xl font-bold text-white">
-              Gumawang Coffee
+              {t('footer.brand')}
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-cream-300">
-              Roasted with Care, Brewed with Character. Small batch roasting
-              with carefully selected beans from Indonesia's finest
-              coffee-growing regions.
+              {t('footer.tagline')}
             </p>
           </div>
 
           <div>
             <h4 className="font-heading text-lg font-semibold text-white">
-              Navigation
+              {t('footer.navigation')}
             </h4>
             <ul className="mt-4 space-y-2">
-              {[
-                { label: 'Home', href: '#home' },
-                { label: 'Coffee', href: '#coffee' },
-                { label: 'About', href: '#about' },
-              ].map((link) => (
+              {navLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
                     className="cursor-pointer text-sm text-cream-300 transition-colors hover:text-gold-500"
                   >
-                    {link.label}
+                    {t(link.labelKey)}
                   </a>
                 </li>
               ))}
@@ -61,7 +63,7 @@ export default function Footer() {
 
           <div>
             <h4 className="font-heading text-lg font-semibold text-white">
-              Contact
+              {t('footer.contact')}
             </h4>
             <ul className="mt-4 space-y-3">
               <li className="flex items-center gap-2 text-sm text-cream-300">
@@ -78,15 +80,14 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2 text-sm text-cream-300">
                 <MessageCircle size={16} className="shrink-0" />
-                WhatsApp
+                {t('footer.whatsapp')}
               </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-12 border-t border-dark-600 pt-8 text-center text-sm text-cream-400">
-          &copy; {new Date().getFullYear()} Gumawang Coffee. All rights
-          reserved.
+          &copy; {new Date().getFullYear()} {t('footer.copyright')}
         </div>
       </div>
     </footer>

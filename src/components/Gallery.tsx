@@ -1,15 +1,17 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 
 const images = [
-  { src: 'https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=600&q=80', alt: 'Coffee beans close-up' },
-  { src: 'https://images.unsplash.com/photo-1511920170033-f8396924c348?w=600&q=80', alt: 'Coffee roasting process' },
-  { src: 'https://images.unsplash.com/photo-1504630083234-14187a9df0f5?w=600&q=80', alt: 'Coffee packaging' },
-  { src: 'https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=600&q=80', alt: 'Coffee brewing' },
-  { src: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80', alt: 'Cup of coffee' },
-  { src: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80', alt: 'Coffee warehouse' },
+  { src: 'https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=600&q=80', altKey: 'gallery.images.img1' },
+  { src: 'https://images.unsplash.com/photo-1511920170033-f8396924c348?w=600&q=80', altKey: 'gallery.images.img2' },
+  { src: 'https://images.unsplash.com/photo-1504630083234-14187a9df0f5?w=600&q=80', altKey: 'gallery.images.img3' },
+  { src: 'https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=600&q=80', altKey: 'gallery.images.img4' },
+  { src: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80', altKey: 'gallery.images.img5' },
+  { src: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80', altKey: 'gallery.images.img6' },
 ]
 
 export default function Gallery() {
+  const { t } = useTranslation()
   return (
     <section className="bg-cream-100 py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
@@ -21,17 +23,17 @@ export default function Gallery() {
           className="mb-16 text-center"
         >
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-gold-700">
-            Gallery
+            {t('gallery.label')}
           </p>
           <h2 className="font-heading text-4xl font-bold leading-tight tracking-tight text-coffee-700 md:text-6xl">
-            Our World of Coffee
+            {t('gallery.title')}
           </h2>
         </motion.div>
 
         <div className="columns-2 gap-4 md:columns-3">
           {images.map((image, i) => (
             <motion.div
-              key={image.alt}
+              key={image.altKey}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
@@ -40,7 +42,7 @@ export default function Gallery() {
             >
               <img
                 src={image.src}
-                alt={image.alt}
+                alt={t(image.altKey)}
                 loading="lazy"
                 className="w-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
